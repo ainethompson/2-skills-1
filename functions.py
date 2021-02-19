@@ -24,7 +24,7 @@ Return:
 def is_hometown(town):
 
     hometown = "Berkeley"
-    
+
     return town.lower() == hometown.lower()
 
 
@@ -43,7 +43,11 @@ Return:
     - Full name (str)
 """
 
-# Write your function here
+def get_full_name(first_name, last_name):
+
+    full_name = f"{first_name} {last_name}"
+
+    return full_name
 
 
 """PROMPT 3
