@@ -3,7 +3,6 @@
 Complete the following functions.
 """
 
-
 def print_indices(items):
     """Print each item in the list, followed by its index.
 
@@ -23,8 +22,9 @@ def print_indices(items):
         berry 1
         cherry 2
     """
+    for item in items:
+        print(item, items.index(item))
 
-    print("Nothing at all")
 
 
 def words_in_common(words1, words2):
