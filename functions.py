@@ -21,7 +21,11 @@ Return:
     - True or False (bool)
 """
 
-# Write your function here
+def is_hometown(town):
+
+    hometown = "Berkeley"
+    
+    return town.lower() == hometown.lower()
 
 
 """PROMPT 2
