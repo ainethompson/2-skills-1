@@ -54,18 +54,14 @@ def words_in_common(words1, words2):
 
         >>> words_in_common(
         ...     ['lamb', 'chili', 'cheese'],
-        ...     ['cake', 'ice cream']
+        ...     ['lamb', 'chili', 'cheese'],
         ... )
         []
     """
 
-    dupes = []
+    dupes = {word for word in words1 if word in words2}
 
-    for word in words1:
-        if word in words2 and word not in dupes:
-            dupes.append(word)
-
-    return sorted(dupes)
+    return sorted(list(dupes))
 
 
 def every_other_item(items):
@@ -101,4 +97,4 @@ def smallest_n_items(items, n):
         [1, 1]
     """
 
-    return []
+    return sorted(items)[0:n][::-1]
