@@ -47,7 +47,7 @@ def get_full_name(first_name, last_name):
 
     full_name = f"{first_name} {last_name}"
 
-    return full_name
+    return full_name.title()
 
 
 """PROMPT 3
@@ -72,7 +72,15 @@ Arguments:
     - Hometown (str)
 """
 
-# Write your function here
+def greeting(first_name, last_name, town):
+
+    full_name = get_full_name(first_name, last_name)
+
+    if is_hometown(town):
+        print(f"Hi {full_name}, we're from the same place!")
+    if not is_hometown(town):
+        print(f"Hi {full_name}, I'd like to visit {town.title()}!")
+
 
 
 """PROMPT 4
