@@ -77,7 +77,7 @@ def every_other_item(items):
        ['a', True, 0]
     """
 
-    return ['the wrong thing']
+    return [item for item in items if items.index(item) % 2 == 0]
 
 
 def smallest_n_items(items, n):
