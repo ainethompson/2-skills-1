@@ -26,7 +26,6 @@ def print_indices(items):
         print(item, items.index(item))
 
 
-
 def words_in_common(words1, words2):
     """Return words that are shared between `words1` and `words2`.
 
@@ -60,7 +59,13 @@ def words_in_common(words1, words2):
         []
     """
 
-    return ['the wrong thing']
+    dupes = []
+
+    for word in words1:
+        if word in words2 and word not in dupes:
+            dupes.append(word)
+
+    return sorted(dupes)
 
 
 def every_other_item(items):
