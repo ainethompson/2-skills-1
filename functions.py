@@ -223,4 +223,10 @@ Return:
     - (word, wordx3) (tuple)
 """
 
-# Write your function here
+def word_tuple(word):
+
+    def word_x3():
+        return word * 3
+
+    return (word, word_x3())
+
