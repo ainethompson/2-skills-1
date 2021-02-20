@@ -159,7 +159,20 @@ Return:
     - Total price after taxes and fees (float)
 """
 
-# Write your function here
+def get_total_cost(base_price, state, tax_percent = 0.05):
+
+    subtotal = base_price + base_price * tax_percent
+
+    special_fees = {'CA': subtotal*0.03, 'PA': 2, 'MA': 3}
+
+    if state == 'MA' and base_price <= 100:
+        special_fees['MA'] = 1
+
+    if state in special_fees.keys():
+        return subtotal + special_fees[state]
+
+    return subtotal
+
 
 
 """PROMPT 7
