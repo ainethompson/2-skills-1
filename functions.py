@@ -104,7 +104,11 @@ Return:
     - True or False (bool)
 """
 
-# Write your function here
+def is_berry(fruit):
+
+    berries = set(['strawberry', 'raspberry', 'blackberry', 'currant'])
+
+    return fruit.lower() in berries
 
 
 """PROMPT 5
