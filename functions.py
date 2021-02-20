@@ -124,8 +124,14 @@ Return:
     - Shipping cost (int)
 """
 
-# Write your function here
+def get_shipping_cost(to_ship):
 
+    if is_berry(to_ship):
+        shipping_cost = 0
+    else:
+        shipping_cost = 5    
+        
+    return f"Shipping cost: ${shipping_cost}"
 
 """PROMPT 6
 
