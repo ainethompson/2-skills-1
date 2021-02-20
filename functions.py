@@ -193,7 +193,10 @@ Return:
     - A list with arguments added to the end (list)
 """
 
-# Write your function here
+def add_to_list(lst, *args):
+
+    lst.extend([*args])
+    return lst
 
 
 """PROMPT 8
